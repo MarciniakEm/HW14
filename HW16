@@ -1,0 +1,35 @@
+
+public class Driver 
+{
+	public static void main(String[] args)
+	{
+		String s = "0101010101";
+		System.out.println(s);
+		System.out.println(Driver.binaryToInteger(s));
+		System.out.println(Integer.parseInt(s));
+	}
+	
+	//this guy should take a String representation of a binary number
+	//as a parameter and return as a int the decimal equivalent
+	static int binaryToInteger(String bin)
+	{
+		int place = 1;
+		int total = 0;
+		char currChar;
+		for(int i=s.length -1; i>=0; i--)
+		{
+			currChar = s.charAt(i);
+			if(currChar == '-')
+			{
+				return total * -1;
+			}
+			else
+			{
+				total += (Driver.charToInt(currChar) * place);
+				place *= 2;
+			}
+		}
+		return total;
+	}
+	
+	
